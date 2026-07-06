@@ -103,6 +103,12 @@ section p {
   font-size: 0.9rem;
 }
 
+.contact-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
 .contact-buttons {
   display: flex;
   flex-direction: column;

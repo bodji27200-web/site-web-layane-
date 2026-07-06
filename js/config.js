@@ -7,6 +7,7 @@ const SITE_CONFIG = {
   prixLabel: "Prix de lancement (non définitif)",
   zone: "Les Sables-d'Olonne",
   supplement: "Supplément kilométrique possible hors secteur",
-  telephone: "06 00 00 00 00", // TODO: remplacer par le numéro du flyer
-  email: "contact@resto-phare.fr", // TODO: remplacer par l'email du flyer
+  telephone: "06 20 69 99 99",
+  telephoneNote: "Si pas de réponse, merci de laisser un message",
+  email: "resto.phare@outlook.fr",
 };
