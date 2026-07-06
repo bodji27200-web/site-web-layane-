@@ -1,5 +1,6 @@
 :root {
   --noir: #14110f;
+  --anthracite: #1c1815;
   --orange: #ff6a13;
   --blanc: #ffffff;
   --gris: #b8b3ad;
@@ -27,24 +28,59 @@ body {
 
 header.hero {
   text-align: center;
-  padding: 48px 20px 32px;
+  padding: 56px 0 40px;
+  background: linear-gradient(180deg, #1c1712 0%, var(--noir) 70%);
+  border-bottom: 1px solid rgba(255, 106, 19, 0.25);
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--orange);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
 }
 
 header.hero h1 {
-  font-size: 2rem;
-  color: var(--orange);
-  letter-spacing: 1px;
+  font-size: 1.9rem;
+  line-height: 1.25;
+  color: var(--blanc);
+  font-weight: 800;
 }
 
-header.hero p {
-  margin-top: 8px;
+.subtitle {
+  margin-top: 10px;
   color: var(--gris);
   font-size: 1.05rem;
 }
 
+.badge-hero {
+  margin-top: 20px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.hero-trust {
+  margin-top: 24px;
+  color: var(--gris);
+  font-size: 0.9rem;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 section {
-  padding: 32px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--anthracite);
+  border-radius: 14px;
+  padding: 28px 20px;
+  margin: 16px 0;
 }
 
 section h2 {
@@ -149,7 +185,8 @@ footer {
     font-size: 2.6rem;
   }
 
-  .contact-buttons {
+  .contact-buttons,
+  .hero-actions {
     flex-direction: row;
     justify-content: center;
   }
