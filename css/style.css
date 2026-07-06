@@ -316,6 +316,44 @@ section p {
   text-align: center;
 }
 
+.contact-secteur {
+  color: var(--gris);
+}
+
+.contact-infos {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-infos li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--noir);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+}
+
+.contact-infos .contact-label {
+  color: var(--gris);
+  font-size: 0.85rem;
+}
+
+.contact-infos a {
+  color: var(--blanc);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-infos a:hover {
+  color: var(--orange);
+}
+
 .contact-buttons {
   display: flex;
   flex-direction: column;
@@ -346,9 +384,36 @@ section p {
 
 footer {
   text-align: center;
-  padding: 24px 20px 40px;
+  padding: 32px 20px 40px;
   color: var(--gris);
   font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 48px;
+}
+
+.footer-brand {
+  color: var(--blanc);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-list a {
+  color: var(--gris);
+  text-decoration: none;
+}
+
+.footer-list a:hover {
+  color: var(--orange);
 }
 
 @media (min-width: 600px) {

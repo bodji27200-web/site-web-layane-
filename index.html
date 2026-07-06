@@ -3,9 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>resto.phare — Restauration de phares avant | Les Sables-d'Olonne</title>
-  <meta name="description" content="Restauration de phares avant à domicile, sur rendez-vous, aux Sables-d'Olonne." />
+  <title>Restauration de phares de voiture aux Sables-d'Olonne | resto.phare</title>
+  <meta name="description" content="Restauration et rénovation de phares de voiture à domicile aux Sables-d'Olonne. Phare jauni ou opaque ? Retrouvez des optiques clairs, sur rendez-vous." />
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "resto.phare",
+    "description": "Restauration et rénovation de phares de voiture à domicile, sur rendez-vous.",
+    "telephone": "+33620699999",
+    "email": "resto.phare@outlook.fr",
+    "areaServed": "Les Sables-d'Olonne",
+    "priceRange": "15€ / phare"
+  }
+  </script>
 </head>
 <body>
   <header class="hero">
@@ -34,6 +46,13 @@
       <p>
         Restauration professionnelle de phares avant, directement chez vous,
         sur la zone de <strong data-config="zone">Les Sables-d'Olonne</strong>.
+        La rénovation redonne toute sa transparence à un phare opaque ou jauni,
+        là où un simple nettoyage de phare de voiture ne suffit plus.
+      </p>
+      <p>
+        Des phares trop ternes éclairent moins bien la nuit et peuvent être
+        signalés lors du contrôle technique. Une restauration évite souvent
+        le remplacement complet du bloc optique.
       </p>
       <p data-config="supplement">Supplément kilométrique possible hors secteur</p>
     </section>
@@ -138,17 +157,46 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>Déplacement à domicile uniquement sur rendez-vous.</p>
+      <p>Déplacement à domicile uniquement, sur rendez-vous.</p>
+
+      <ul class="contact-infos">
+        <li>
+          <span class="contact-label">Téléphone</span>
+          <a data-config="telephone" href="tel:">06 20 69 99 99</a>
+        </li>
+        <li>
+          <span class="contact-label">Email</span>
+          <a data-config="email" href="mailto:">resto.phare@outlook.fr</a>
+        </li>
+        <li>
+          <span class="contact-label">Zone d'intervention</span>
+          <span><span data-config="zone">Les Sables-d'Olonne</span> et alentours</span>
+        </li>
+      </ul>
+
       <div class="contact-buttons">
-        <a class="btn btn-primary" data-config="telephone" href="tel:">06 20 69 99 99</a>
-        <a class="btn btn-secondary" data-config="email" href="mailto:">resto.phare@outlook.fr</a>
+        <a class="btn btn-primary" data-config="telephone" data-config-static-text href="tel:">Appeler maintenant</a>
+        <a class="btn btn-secondary" data-config="email" data-config-static-text href="mailto:">Envoyer un email</a>
       </div>
+
+      <p class="contact-note contact-secteur">
+        Secteur <span data-config="zone">Les Sables-d'Olonne</span>.
+        <span data-config="supplement">Supplément kilométrique possible hors secteur</span>.
+      </p>
       <p class="contact-note" data-config="telephoneNote">Si pas de réponse, merci de laisser un message</p>
     </section>
   </main>
 
   <footer>
-    <p>resto.phare — Les Sables-d'Olonne</p>
+    <div class="container footer-inner">
+      <p class="footer-brand" data-config="nom">resto.phare</p>
+      <ul class="footer-list">
+        <li>Restauration et rénovation de phares de voiture à domicile</li>
+        <li><span data-config="zone">Les Sables-d'Olonne</span> et alentours</li>
+        <li><a data-config="telephone" href="tel:">06 20 69 99 99</a></li>
+        <li><a data-config="email" href="mailto:">resto.phare@outlook.fr</a></li>
+      </ul>
+    </div>
   </footer>
 
   <script src="js/config.js"></script>
