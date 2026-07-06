@@ -99,7 +99,21 @@
 
     <section id="rdv">
       <h2>Demande de rendez-vous</h2>
-      <form id="rdv-form" class="form">
+      <form
+        id="rdv-form"
+        class="form"
+        name="demande-rendez-vous"
+        method="POST"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="demande-rendez-vous" />
+
+        <!-- Champ anti-spam (honeypot) : caché aux visiteurs, rempli uniquement par les robots -->
+        <p hidden aria-hidden="true">
+          <label>Ne pas remplir ce champ : <input name="bot-field" autocomplete="off" tabindex="-1" /></label>
+        </p>
+
         <div class="form-row">
           <label for="rdv-nom">Nom</label>
           <input type="text" id="rdv-nom" name="nom" required autocomplete="family-name" />
@@ -151,8 +165,8 @@
         <button type="submit" class="btn btn-primary form-submit">Envoyer la demande</button>
 
         <p class="form-note">
-          L'envoi ouvre votre application email avec la demande pré-remplie.
-          Votre demande sera ensuite étudiée puis confirmée manuellement par téléphone ou par email.
+          Votre demande est envoyée directement à resto.phare.
+          Elle sera ensuite étudiée puis confirmée manuellement par téléphone ou par email.
         </p>
       </form>
     </section>

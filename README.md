@@ -11,7 +11,7 @@ css/style.css                    Styles
 js/config.js                     Infos modifiables (prix, téléphone, email, zone…)
 js/gallery.js                    Galerie avant/après (liste des réalisations)
 js/main.js                       Injection des infos de config dans la page
-js/form.js                       Formulaire de rendez-vous (envoi via mailto)
+js/form.js                       Formulaire de rendez-vous (envoi via Netlify Forms)
 assets/images/realisations/      Photos avant/après
 docs/                            Documentation interne
 netlify.toml                     Configuration de déploiement Netlify
@@ -85,11 +85,18 @@ Plus de détails (conseils de prise de vue, nommage, poids des images) dans
 
 ## Formulaire de rendez-vous
 
-Le formulaire fonctionne actuellement **sans backend** : l'envoi ouvre
-l'application email du visiteur avec la demande pré-remplie (`mailto:`).
-Une évolution vers **Netlify Forms** (réception des demandes directement
-dans Netlify, gratuit jusqu'à 100 soumissions/mois) est prévue dans un
-prochain lot.
+Le formulaire utilise **Netlify Forms** (gratuit jusqu'à 100 soumissions/mois) :
+
+- Les demandes envoyées sont visibles dans Netlify :
+  **Site dashboard → Forms → demande-rendez-vous**.
+- Après toute **modification du formulaire** dans `index.html`, il faut
+  **redéployer le site** pour que Netlify détecte à nouveau le formulaire.
+- En **local** (sans Netlify), l'envoi automatique ne fonctionne pas :
+  c'est normal, le message d'échec s'affiche alors.
+- En cas d'échec de l'envoi automatique, un lien **mailto** pré-rempli est
+  proposé au visiteur comme solution de secours.
+
+Le rendez-vous reste confirmé manuellement par téléphone ou par email.
 
 ## Déployer sur Netlify depuis GitHub
 
