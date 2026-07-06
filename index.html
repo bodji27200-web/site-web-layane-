@@ -16,7 +16,7 @@
       <span class="badge badge-hero">Prix de lancement : <strong data-config="prix">15€</strong> par phare</span>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact">Demander un rendez-vous</a>
+        <a class="btn btn-primary" href="#rdv">Demander un rendez-vous</a>
         <a class="btn btn-secondary" data-config="telephone" data-config-static-text href="tel:">Appeler maintenant</a>
       </div>
 
@@ -54,6 +54,65 @@
       </ol>
     </section>
 
+    <section id="rdv">
+      <h2>Demande de rendez-vous</h2>
+      <form id="rdv-form" class="form">
+        <div class="form-row">
+          <label for="rdv-nom">Nom</label>
+          <input type="text" id="rdv-nom" name="nom" required autocomplete="family-name" />
+        </div>
+
+        <div class="form-row">
+          <label for="rdv-prenom">Prénom</label>
+          <input type="text" id="rdv-prenom" name="prenom" required autocomplete="given-name" />
+        </div>
+
+        <div class="form-row">
+          <label for="rdv-telephone">Téléphone</label>
+          <input type="tel" id="rdv-telephone" name="telephone" required autocomplete="tel" />
+        </div>
+
+        <div class="form-row">
+          <label for="rdv-email">Email</label>
+          <input type="email" id="rdv-email" name="email" required autocomplete="email" />
+        </div>
+
+        <div class="form-row">
+          <label for="rdv-ville">Ville</label>
+          <input type="text" id="rdv-ville" name="ville" required autocomplete="address-level2" />
+        </div>
+
+        <div class="form-row">
+          <label for="rdv-type">Type de demande</label>
+          <select id="rdv-type" name="type" required>
+            <option value="Diagnostic / visualisation">Diagnostic / visualisation</option>
+            <option value="Intervention">Intervention</option>
+            <option value="Question">Question</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="rdv-moment">Moment préféré</label>
+          <select id="rdv-moment" name="moment" required>
+            <option value="Matin">Matin</option>
+            <option value="Après-midi">Après-midi</option>
+            <option value="Soir">Soir</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="rdv-message">Message</label>
+          <textarea id="rdv-message" name="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary form-submit">Envoyer la demande</button>
+
+        <p class="form-note">
+          Votre demande sera étudiée puis confirmée manuellement par téléphone ou par email.
+        </p>
+      </form>
+    </section>
+
     <section id="contact">
       <h2>Contact</h2>
       <p>Déplacement à domicile uniquement sur rendez-vous.</p>
@@ -71,5 +130,6 @@
 
   <script src="js/config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>

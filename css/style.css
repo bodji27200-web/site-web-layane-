@@ -139,6 +139,61 @@ section p {
   font-size: 0.9rem;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+  color: var(--blanc);
+  font-weight: 600;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  background: var(--noir);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  color: var(--blanc);
+  padding: 12px 14px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.form-row textarea {
+  resize: vertical;
+}
+
+.form-submit {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.form-note {
+  color: var(--gris);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
 .contact-note {
   margin-top: 12px;
   font-size: 0.85rem;
