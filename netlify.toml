@@ -1,0 +1,6 @@
+# Configuration Netlify — resto.phare
+# Site 100 % statique : aucun build nécessaire.
+
+[build]
+  # Pas de commande de build : les fichiers sont servis tels quels.
+  publish = "."
