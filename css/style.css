@@ -1,0 +1,161 @@
+:root {
+  --noir: #14110f;
+  --orange: #ff6a13;
+  --blanc: #ffffff;
+  --gris: #b8b3ad;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--noir);
+  color: var(--blanc);
+  line-height: 1.5;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+header.hero {
+  text-align: center;
+  padding: 48px 20px 32px;
+}
+
+header.hero h1 {
+  font-size: 2rem;
+  color: var(--orange);
+  letter-spacing: 1px;
+}
+
+header.hero p {
+  margin-top: 8px;
+  color: var(--gris);
+  font-size: 1.05rem;
+}
+
+section {
+  padding: 32px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+section h2 {
+  color: var(--orange);
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+section p {
+  color: var(--gris);
+}
+
+.badge {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--noir);
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.prix {
+  font-size: 2.2rem;
+  color: var(--blanc);
+  font-weight: 700;
+}
+
+.process {
+  list-style: none;
+  counter-reset: step;
+}
+
+.process li {
+  counter-increment: step;
+  padding: 10px 0 10px 40px;
+  position: relative;
+  color: var(--blanc);
+}
+
+.process li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 26px;
+  height: 26px;
+  background: var(--orange);
+  color: var(--noir);
+  border-radius: 50%;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.contact-note {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn {
+  display: block;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--noir);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--blanc);
+  border: 1px solid var(--gris);
+}
+
+footer {
+  text-align: center;
+  padding: 24px 20px 40px;
+  color: var(--gris);
+  font-size: 0.85rem;
+}
+
+@media (min-width: 600px) {
+  header.hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .contact-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn {
+    flex: 1;
+    max-width: 260px;
+  }
+}
