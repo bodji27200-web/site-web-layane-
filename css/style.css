@@ -139,6 +139,122 @@ section p {
   font-size: 0.9rem;
 }
 
+/* ─── Galerie Avant / Après ─── */
+
+.eyebrow-section {
+  margin-bottom: 4px;
+}
+
+.galerie-intro {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.galerie-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.galerie-card {
+  background: var(--noir);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.galerie-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.galerie-photo {
+  position: relative;
+  margin: 0;
+  background: var(--anthracite);
+}
+
+.galerie-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.galerie-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.galerie-label-avant {
+  background: rgba(20, 17, 15, 0.85);
+  color: var(--gris);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.galerie-label-apres {
+  background: var(--orange);
+  color: var(--noir);
+}
+
+.galerie-infos {
+  padding: 16px 18px 18px;
+}
+
+.galerie-infos h3 {
+  color: var(--blanc);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.galerie-ville {
+  margin-top: 2px;
+  color: var(--orange);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.galerie-description {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.galerie-vide {
+  text-align: center;
+  padding: 40px 24px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  color: var(--gris);
+}
+
+.galerie-vide-icone {
+  width: 44px;
+  height: 44px;
+  color: var(--orange);
+  margin-bottom: 14px;
+}
+
+.galerie-vide-titre {
+  color: var(--blanc);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.galerie-vide-texte {
+  margin-top: 6px;
+  font-size: 0.85rem;
+}
+
 .form {
   display: flex;
   flex-direction: column;
