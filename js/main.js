@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (key === "telephone") el.href = `tel:${SITE_CONFIG[key].replace(/\s/g, "")}`;
         if (key === "email") el.href = `mailto:${SITE_CONFIG[key]}`;
       }
-      el.textContent = SITE_CONFIG[key];
+      if (!el.hasAttribute("data-config-static-text")) {
+        el.textContent = SITE_CONFIG[key];
+      }
     }
   });
 });
