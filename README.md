@@ -117,6 +117,24 @@ Le fichier `netlify.toml` à la racine contient déjà la configuration.
 
 Ensuite, **chaque push sur `main`** redéploie automatiquement le site.
 
+### Quelle adresse partager au client ?
+
+Netlify donne deux types de liens, ne pas les confondre :
+
+- **Adresse permanente du site** (à toujours utiliser) : `https://<nom-du-site>.netlify.app`,
+  par exemple `https://resonant-granita-65d3ca.netlify.app`. Elle affiche
+  toujours le dernier déploiement **publié en production**.
+- **Lien de déploiement précis** (à ne pas partager) : préfixé par un long
+  identifiant, par exemple `https://6a4c2090...--resonant-granita-65d3ca.netlify.app`.
+  Ce lien correspond à un déploiement figé dans le temps et peut afficher
+  « Site not found » une fois ce déploiement remplacé par un plus récent.
+
+Si l'adresse permanente affiche « Site not found », c'est qu'aucun
+déploiement n'a encore été **publié en production** :
+**Deploys → vérifier qu'un déploiement a le statut « Published »**, sinon
+**Trigger deploy → Deploy site** (faisable depuis un téléphone, aucun
+ordinateur nécessaire).
+
 ### Connecter un nom de domaine (plus tard)
 
 Dans Netlify : **Site settings → Domain management → Add custom domain**,
